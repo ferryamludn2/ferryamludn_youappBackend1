@@ -7,8 +7,12 @@
     ],
     "routes": [
         {
+            "src": "/api-docs/(.*)",
+            "dest": "/app.js"
+        },
+        {
             "src": "/(.*)",
-            "dest": "/swagger.js"
+            "dest": "/app.js"
         }
     ]
 }
