@@ -15,11 +15,7 @@ app.use(bodyParser.json());
 app.use('/api', authRoutes);
 app.use('/api', profileRoutes);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-app.get("/testing", (req,res) => {
-    res.status(200).json({
-        message : "BErhhasil"
-    })
-})
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
